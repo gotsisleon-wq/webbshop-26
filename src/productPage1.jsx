@@ -19,7 +19,7 @@ const ProductPage = () => {
     }
     return (
         id &&
-        <div key={id} className="product">
+        <div key={1} className="product">
             <h1>{productData.title}</h1>
             <h3>Rating: {productData.rating}</h3>
             <p>{productData.description}</p>
