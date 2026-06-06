@@ -19,6 +19,7 @@ function Product(props) {
     }
     console.log(productData);
     return (
+        id &&
         <div key={id} className="product">
             <h3>{productData.title}</h3>
             <h4>Rating: {productData.rating}</h4>

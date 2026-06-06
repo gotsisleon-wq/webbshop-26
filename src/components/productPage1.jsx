@@ -1,10 +1,8 @@
-import Product from "./Product";
-import ProductData from "./ProductData";
 import React from "react";
+import Product from "./components/Product";
+import ProductData from "./components/ProductData";
 
-
-
-function ProductPage(props) {
+const ProductPage = (props) => {
     const [productData, setProductData] = React.useState(null);
 
     React.useEffect(() => {
@@ -21,12 +19,14 @@ function ProductPage(props) {
     }
     console.log(productData);
     return (
+        id &&
         <div key={id} className="product">
             <h1>{productData.title}</h1>
             <h3>Rating: {productData.rating}</h3>
             <p>{productData.description}</p>
-            <p>${productData.price}</p>
+            <h3>${productData.price}</h3>
         </div>
     );
 }
 
+export default ProductPage;
